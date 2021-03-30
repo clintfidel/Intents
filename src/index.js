@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './assets/main.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Intents from './components/Intents';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" component={Intents} exact />
+    </Switch>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
