@@ -1,14 +1,18 @@
 import React from 'react'
-import Checkbox from './helpers/Checkbox'
 
-const IntentCard = ({ expressionType, expression, response, colorCode }) => {
+const IntentCard = ({ expressionType, id, name, onChange, checked, expression, response, colorCode }) => {
   return (
     <div className="w-full h-full mb-4 md:mb-0 lg:mb-0 max-h-full rounded-md bg-white border-2 border-primary border-opacity-20 overflow-y-scroll">
       <div className={["w-full", "h-1", "rounded-t-md", `bg-${colorCode}`, 'border-1', `border-${colorCode}`].join(' ')}></div>
       <div className="p-6">
-        <div className="flex">
-          <p className="font-customBarlow justify-start text-2xl border-b-2 border-primary border-opacity-20 text-primary-text my-2">{expressionType}</p>
-          <Checkbox className="justify-end" />
+        <div className="flex md:justify-between">
+          <p className="font-customBarlow text-2xl border-b-2 border-primary border-opacity-20 text-primary-text my-2">{expressionType}</p>
+          <div>
+            <div class="round mt-3 ml-4 md:ml-0 lg:ml-0">
+              <input onChange={onChange} checked={checked} type="checkbox" id={id} name={name} />
+              <label for={id}></label>
+            </div>
+          </div>
         </div>
         {
           expression.map((value, index) => (
