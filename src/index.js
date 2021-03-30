@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/main.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Intents from './components/Intents';
+import Intents from './components/functional/Intents';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

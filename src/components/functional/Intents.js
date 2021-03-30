@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import IntentCard from "./IntentCards";
-import { intentsData } from "../utils";
+import IntentCard from "../presentational/IntentCards";
+import { intentsData } from "../../utils";
 
 const Intents = () => {
   const [checkedItems , setCheckedItems] = useState([])
